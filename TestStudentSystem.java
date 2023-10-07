@@ -122,15 +122,15 @@ public class TestStudentSystem{
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入查询学生的名字：");
         String name=sc.next();
-        String inquirename="";
+        String inquirename;
         int a=select(name);
         if (a == -1) {
             System.out.println("查无此人");
         }
-        else
+        else{
             inquirename="姓名："+names[a]+"\t年龄："+ages[a]+"\t性别："+ sexes[a]+"\t成绩："+scores[a];
         System.out.println(inquirename);
-        
+        }
     }
     public static void printArray(){
         if (names.length==0){
